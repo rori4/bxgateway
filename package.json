@@ -1,8 +1,8 @@
 {
   "name": "bloxroute",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "repository": {
-    "url": "https://github.com/jonasbostoen/bxgateway"
+    "url": "https://github.com/rori4/bxgateway"
   },
   "description": "Package for connecting to Bloxroute's gateways",
   "main": "dist/index.js",

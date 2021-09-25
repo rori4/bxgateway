@@ -8,19 +8,19 @@ export class Filter {
     }
 
     to(address: string) {
-        this._filter += `({to} == '${address}')`;
+        this._filter += `to == '${address}'`;
         this._valid = true;
         return this;
     }
 
     from(address: string) {
-        this._filter += `({from} == '${address}')`;
+        this._filter += `from == '${address}'`;
         this._valid = true;
         return this;
     }
 
     method(methodId: string) {
-        this._filter += `({methodId} == '${methodId}')`;
+        this._filter += `methodId == '${methodId}'`;
         this._valid = true;
         return this;
     }
