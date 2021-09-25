@@ -20,7 +20,7 @@ export class Filter {
     }
 
     method(methodId: string) {
-        this._filter += `methodId == '${methodId}'`;
+        this._filter += `method_id == '${methodId}'`;
         this._valid = true;
         return this;
     }
