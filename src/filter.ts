@@ -32,13 +32,13 @@ export class Filter {
     }
 
     gasPriceGt(gasPrice: string) {
-        this._filter += `gas_price > '${gasPrice}'`;
+        this._filter += `gas_price > ${gasPrice}`;
         this._valid = true;
         return this;
     }
 
     gasPriceLt(gasPrice: string) {
-        this._filter += `gas_price < '${gasPrice}'`;
+        this._filter += `gas_price < ${gasPrice}`;
         this._valid = true;
         return this;
     }
