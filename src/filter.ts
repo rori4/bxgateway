@@ -19,8 +19,26 @@ export class Filter {
         return this;
     }
 
+    fromIn(addresses: string[]) {
+        this._filter += `from in ${JSON.stringify(addresses)}`;
+        this._valid = true;
+        return this;
+    }
+
     method(methodId: string) {
         this._filter += `method_id == '${methodId}'`;
+        this._valid = true;
+        return this;
+    }
+
+    gasPriceGt(gasPrice: string) {
+        this._filter += `gas_price > '${gasPrice}'`;
+        this._valid = true;
+        return this;
+    }
+
+    gasPriceLt(gasPrice: string) {
+        this._filter += `gas_price < '${gasPrice}'`;
         this._valid = true;
         return this;
     }
