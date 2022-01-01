@@ -13,6 +13,12 @@ export class Filter {
         return this;
     }
 
+    toIn(addresses: string[]) {
+        this._filter += `to in ${JSON.stringify(addresses)}`;
+        this._valid = true;
+        return this;
+    }
+
     from(address: string) {
         this._filter += `from == '${address}'`;
         this._valid = true;
