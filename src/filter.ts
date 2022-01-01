@@ -37,6 +37,12 @@ export class Filter {
         return this;
     }
 
+    methodIn(methodIds: string[]) {
+        this._filter += `method_id in ${JSON.stringify(methodIds)}`;
+        this._valid = true;
+        return this;
+    }
+
     gasPriceGt(gasPrice: string) {
         this._filter += `gas_price > ${gasPrice}`;
         this._valid = true;
