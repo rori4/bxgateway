@@ -49,7 +49,7 @@ export interface Transaction {
     chainId: Hex
 }
 
-export type StreamTopic = 'newTxs' | 'pendingTxs' | 'newBlocks';
+export type StreamTopic = 'newTxs' | 'pendingTxs' | 'newBlocks' | 'internalTxsMined' | 'bdnBlocks' | 'transactionStatus'
 
 export type Network = 'Mainnet' | 'BSC-Mainnet'
 
@@ -60,6 +60,8 @@ export interface AuthOptions {
 }
 
 export type Includable = 
+    // internalTxsMined
+    'logs'| 'logIndex' | 'callTrace' |
     // newBlocks
     'hash' | 'header' | 'header.number' | 'header.parentHash' | 'header.sha3Uncles' | 'header.miner' |
     'header.stateRoot' | 'header.transactionsRoot' | 'header.receiptsRoot' | 'header.logsBloom' |
